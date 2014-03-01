@@ -50,6 +50,6 @@ def compute_distance_matrix(data):
       dist_mat[i,j] = hellinger(p, q)
 
   for i in range(n_samples):
-    for j in range(i+1,N):
+    for j in range(i+1,n_samples):
       dist_mat[j,i] = dist_mat[i,j]
   return dist_mat
