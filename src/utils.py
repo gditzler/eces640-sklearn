@@ -38,19 +38,18 @@ def hellinger(p, q):
 
 def compute_distance_matrix(data):
   """
+  compute the hellinger distance between samples in a data matrix 
+   :data - numpy array
   """
-  pool = Pool(2)
   n_samples = len(data)
   dist_mat = numpy.zeros([n_samples, n_samples])
-  res = []
-
   for i in range(n_samples):
     print i
     for j in range(i+1,n_samples):
       p = data[i]/data[i].sum()
       q = data[j]/data[j].sum()
-      res.append(pool.apply_async(hellinger, args=(p,q))) 
-      #dist_mat[i,j] = hellinger(p, q)
-  pool.close()
-  pool.join()
+      dist_mat[i,j] = hellinger(p, q)
+  for i in range(n_samples):
+    for j in range(i+1,N):
+      dist_mat[j,i] = dist_mat[i,j]
   return dist_mat
