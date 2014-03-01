@@ -27,3 +27,10 @@ def return_phenotypes(samples, metadata, phenotype_id):
     labels.append(metadata[sample][phenotype_id])
   return numpy.array(labels)
 
+def hellinger(p, q):
+  """
+  return the hellinger distance between distributions p & q
+   :q, p - probability vectors
+  """
+  return norm(numpy.sqrt(p) - numpy.sqrt(q))/numpy.sqrt(2.0)
+
