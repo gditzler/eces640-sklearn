@@ -9,4 +9,4 @@ map_fp = "../data/study_550_mapping_file.txt"
 
 data, sample_ids, otus_names = bmu.load_biom(biom_fp)
 dist_mat = utils.compute_distance_matrix(data)
-pickle.dump(dist_matrix, open("../data/distances_study_500.pkl", "wb"))
+pickle.dump(dist_mat, open("../data/distances_study_500.pkl", "wb"))
