@@ -1,5 +1,7 @@
 #!/usr/bin/env python 
 import numpy
+from scipy.linalg import norm
+from multiprocessing import Pool
 
 __author__ = "Gregory Ditzler"
 __copyright__ = "Copyright 2014, EESI Laboratory (Drexel University)"
@@ -34,3 +36,21 @@ def hellinger(p, q):
   """
   return norm(numpy.sqrt(p) - numpy.sqrt(q))/numpy.sqrt(2.0)
 
+def compute_distance_matrix(data):
+  """
+  """
+  pool = Pool(2)
+  n_samples = len(data)
+  dist_mat = numpy.zeros([n_samples, n_samples])
+  res = []
+
+  for i in range(n_samples):
+    print i
+    for j in range(i+1,n_samples):
+      p = data[i]/data[i].sum()
+      q = data[j]/data[j].sum()
+      res.append(pool.apply_async(hellinger, args=(p,q))) 
+      #dist_mat[i,j] = hellinger(p, q)
+  pool.close()
+  pool.join()
+  return dist_mat
