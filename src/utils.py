@@ -1,7 +1,6 @@
 #!/usr/bin/env python 
 import numpy
 from scipy.linalg import norm
-from multiprocessing import Pool
 
 __author__ = "Gregory Ditzler"
 __copyright__ = "Copyright 2014, EESI Laboratory (Drexel University)"
