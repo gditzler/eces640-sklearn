@@ -43,7 +43,6 @@ def compute_distance_matrix(data):
   n_samples = len(data)
   dist_mat = numpy.zeros([n_samples, n_samples])
   for i in range(n_samples):
-    print i
     for j in range(i+1,n_samples):
       p = data[i]/data[i].sum()
       q = data[j]/data[j].sum()
