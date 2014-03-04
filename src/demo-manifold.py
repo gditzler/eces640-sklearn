@@ -1,3 +1,7 @@
+#!/usr/bin/env python 
+"""
+obtained from: http://www.janeriksolem.net/2012/03/isomap-with-scikit-learn.html
+"""
 from pylab import *
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn import manifold, datasets
