@@ -6,6 +6,7 @@ The data was download from the [Earth Microbiome Project](http://www.earthmicrob
 # About the Files
 * `distances_study_500.pkl` - Pickled distance matrix for study 550. The distance between samples is computed using the [Hellinger distance](http://www.tcs.tifr.res.in/~prahladh/teaching/2011-12/comm/lectures/l12.pdf) 
 * `distances_study_500.pkl.gz` - Compressed version of `distances_study_500.pkl`
+* `min_sparse_otu_table.biom` - this is an example BIOM file from the official [BIOM repo](https://github.com/biom-format/biom-format)
 * `study_550_closed_reference_otu_table.biom` - study 550's BIOM file
 * `study_550_mapping_file.txt` - study 550's mapping file containing the metadata
 
