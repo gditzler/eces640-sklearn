@@ -38,9 +38,6 @@ def load_biom(fname):
     # descriptive names for the taxonomies. 
     if sid.has_key("metadata") and sid["metadata"] != None:
       if sid["metadata"].has_key("taxonomy"):
-        #features.append(str( \
-        #    sid["metadata"]["taxonomy"]).strip( \
-        #    "[]").replace(",",";").replace("u'","").replace("'",""))
         features.append(json.dumps(sid["metadata"]["taxonomy"]))
       else:
         features.append(sid["id"])
