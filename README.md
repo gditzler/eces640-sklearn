@@ -10,4 +10,10 @@ This repository was put together for ECES640 at Drexel University. The purpose o
 
 # miscellaneous 
 * The presentation can be found on [SpeakerDeck](http://speakerdeck.com/gditzler/dimensionality-reduction-101-pca-and-pcoa)
-* All code is licensed under the [GPL v3.0](http://www.gnu.org/copyleft/gpl.html) 
+* All code is licensed under the [GPL v3.0](http://www.gnu.org/copyleft/gpl.html)
+
+# some useful links
+* [UniFrac paper](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1317376/pdf/1021-05.pdf)
+* [PyCogent](http://pycogent.org/): this software implements PCoA with a bunch of different distances. its easy to install on linux and macs.
+* [UniFrac Webserver](http://bmf.colorado.edu/unifrac/) and [QIIME](http://qiime.org/)
+
